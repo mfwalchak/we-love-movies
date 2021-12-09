@@ -2,7 +2,6 @@ const router = require("express").Router();
 const app = require("../app");
 const methodNotAllowed = require("../errors/methodNotAllowed");
 const controller = require("./movies_controller");
-const { get } = require("superagent");
 
 
 //all routes should start form the assumption that /movies precedes
