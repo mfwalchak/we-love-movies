@@ -2,7 +2,6 @@ const router = require("express").Router();
 const app = require("../app");
 const methodNotAllowed = require("../errors/methodNotAllowed");
 const controller = require("./movies_controller");
-const cors = require("cors");
 const { get } = require("superagent");
 
 

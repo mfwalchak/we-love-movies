@@ -2,14 +2,12 @@ const router = require("express").Router();
 const app = require("../app");
 const methodNotAllowed = require("../errors/methodNotAllowed");
 const controller = require("./reviews_controller");
-const cors = require("cors");
-
 
 router
     .route("/:reviewId")
     .get(controller.read)
-    .put(cors(), controller.update)
-    .delete(cors(), controller.delete)
+    .put(controller.update)
+    .delete(controller.delete)
     .all(methodNotAllowed);
 
 router
